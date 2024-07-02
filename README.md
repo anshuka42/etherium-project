@@ -21,7 +21,10 @@ github profile link:-https://github.com/anshuka42
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
-### Code Explaination
+
+
+
+##Code Explaination
 ====>Contract Declaration and License
 solidity
 PART OF CODE
