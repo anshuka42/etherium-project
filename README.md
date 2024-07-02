@@ -1,6 +1,6 @@
 # Etherium Project(creating a smart contract)
 Here we have created a contract having two different functions to mint and burn tokens from the particular account. From the mapping balances we can chech our account balance.
-## Description
+## Description 
 Here we have created a contract in which first we will defining different variables like tokenname,token abbreviation and token supply . Then we have a mapping from addresses to unsigned integers which is used to store the balance of each address. Then we will create two different functions to mint and burn tokens from the particular account.
 ## Getting Started
 ### Executing program
