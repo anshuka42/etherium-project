@@ -55,18 +55,6 @@ To compile the code, click on the "Solidity Compiler" tab in the left-hand sideb
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "yourtoken" contract from the dropdown menu, and then click on the "Deploy" button.
 Now you can check token balance on the by clicking on the balances(mapping).For adding tokens to your account click on mint and write the number of tokens you want to add or mint.For removing tokens from your account click on burn and write the number of tokens you want to burn.And then you can verify your balance by clicking on balances.
 
-## Authors
-Anshuka
-github profile link:-https://github.com/anshuka42
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-
-
-
-
 
 Code Explaination
 
@@ -158,3 +146,18 @@ A mapping to keep track of each address's balance.
 A mint function to create new tokens and assign them to an address.
 A burn function to destroy tokens from an address, with a check to ensure the address has enough tokens to burn.
 This contract provides the fundamental operations needed to manage a simple token on the Ethereum blockchain.
+
+
+## Authors
+Anshuka
+github profile link:-https://github.com/anshuka42
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+
+
+
+
+
