@@ -2,8 +2,6 @@
 ## Description
 Here we have created a contract in which first we will defining different variables like tokenname,token abbreviation and token supply . Then we have a mapping from addresses to unsigned integers which is used to store the balance of each address. Then we will create two different functions to mint and burn tokens from the particular account.
 ## Getting Started
-### Installing 
-Use this link to download my program
 ### Executing program
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., etherium_project.sol). Copy and paste the following code into the file:
@@ -24,7 +22,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 
 
-##Code Explaination
+## Code Explaination
 ====>Contract Declaration and License
 solidity
 PART OF CODE
