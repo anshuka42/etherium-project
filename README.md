@@ -30,19 +30,21 @@ By declaring these variables as public, Solidity automatically creates getter fu
 
 ## Mapping for Balances
 solidity
-PART OF CODE
+```javascript 
     // mapping variable here
     mapping(address => uint) public balances;
+```
 balances: This is a mapping from addresses to unsigned integers. It is used to store the balance of each address. The key is an Ethereum address, and the value is the number of tokens that address holds. This mapping is also public, so a getter function is automatically created by Solidity.
 
 ## Mint Function
 solidity
-PART OF CODE
+```javascript 
     // mint function
     function mint(address _address, uint _value) public {
         totalSupply += _value;
         balances[_address] += _value;
     }
+```
 Function Definition: function mint(address _address, uint _value) public defines a public function named mint.
 Parameters:
 _address: The address to which the new tokens will be credited.
@@ -56,7 +58,7 @@ This function effectively creates new tokens and assigns them to a specific addr
 
 ## Burn Function
 solidity
-PART OF CODE
+```javascript 
     // burn function
     function burn(address _address, uint _value) public {
         if (balances[_address] >= _value) {
@@ -64,6 +66,7 @@ PART OF CODE
             balances[_address] -= _value;
         }
     }
+```
 Function Definition: function burn(address _address, uint _value) public defines a public function named burn.
 Parameters:
 _address: The address from which the tokens will be deducted.
