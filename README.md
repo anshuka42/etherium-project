@@ -5,51 +5,8 @@ Here we have created a contract in which first we will defining different variab
 ## Getting Started
 ### Executing program
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., etherium_project.sol). Copy and paste the following code into the file:
-```javascript
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
-
-/*
-       REQUIREMENTS
-    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-    2. Your contract will have a mapping of addresses to balances (address => uint)
-    3. You will have a mint function that takes two parameters: an address and a value. 
-       The function then increases the total supply by that number and increases the balance 
-       of the “sender” address by that amount
-    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
-       It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
-       and from the balance of the “sender”.
-    5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
-       to the amount that is supposed to be burned.
-*/
-
-contract yourToken {
-
-    // public variables here
-    string public tokenName = "alpha";
-    string public tokenAbbre = "alp";
-    uint public totalSupply = 0;
-
-    // mapping variable here
-    mapping(address=>uint) public balances;
-
-    // mint function
-    function mint(address _address,uint _value) public{
-        totalSupply +=_value;
-        balances[_address] +=_value;
-    }
-    // burn function
-    function burn(address _address,uint _value) public{
-        if(balances[_address]>= _value){
-        totalSupply -=_value;
-        balances[_address] -=_value;
-    }
-}
-} 
-```
-
-
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., etherium_project.sol). 
+    
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile etherium_project.sol" button.
 
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "yourtoken" contract from the dropdown menu, and then click on the "Deploy" button.
@@ -88,15 +45,14 @@ tokenAbbre: This is a public variable of type string that stores the abbreviatio
 totalSupply: This is a public variable of type uint (unsigned integer) that keeps track of the total supply of the token. It is initialized to 0.
 By declaring these variables as public, Solidity automatically creates getter functions for them. This allows other contracts or users to query these values.
 
-====>Mapping for Balances
+## Mapping for Balances
 solidity
 PART OF CODE
     // mapping variable here
     mapping(address => uint) public balances;
 balances: This is a mapping from addresses to unsigned integers. It is used to store the balance of each address. The key is an Ethereum address, and the value is the number of tokens that address holds. This mapping is also public, so a getter function is automatically created by Solidity.
 
-
-====>Mint Function
+## Mint Function
 solidity
 PART OF CODE
     // mint function
@@ -115,7 +71,7 @@ balances[_address] += _value; increases the balance of the specified _address by
 This function effectively creates new tokens and assigns them to a specific address, thereby increasing the overall token supply.
 
 
-====>Burn Function
+## Burn Function
 solidity
 PART OF CODE
     // burn function
