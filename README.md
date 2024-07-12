@@ -14,7 +14,7 @@ Now you can check token balance on the by clicking on the balances(mapping).For 
 
 ## Code Explaination
 
-### Public Variables
+## Public Variables
 solidity
 ```javascript 
     // public variables here
@@ -27,7 +27,7 @@ tokenAbbre: This is a public variable of type string that stores the abbreviatio
 totalSupply: This is a public variable of type uint (unsigned integer) that keeps track of the total supply of the token. It is initialized to 0.
 By declaring these variables as public, Solidity automatically creates getter functions for them.
 
-### Mapping for Balances
+## Mapping for Balances
 solidity
 ```javascript 
     // mapping variable here
@@ -35,7 +35,7 @@ solidity
 ```
  Balances is a mapping from addresses to unsigned integers. It is used to store the balance of each address. The key is an Ethereum address, and the value is the number of tokens that address holds. This mapping is also public, so a getter function is automatically created by Solidity.
 
-### Mint Function
+## Mint Function
 solidity
 ```javascript 
     // mint function
@@ -48,13 +48,14 @@ Function Definition:
 Parameters:
 _address: The address to which the new tokens will be credited.
 _value: The number of tokens to be created and added to the total supply and the balance of the specified address.
+
 Function Body:
 totalSupply += _value; increases the totalSupply by the _value amount.
 balances[_address] += _value; increases the balance of the specified _address by the _value amount.
 This function effectively creates new tokens and assigns them to a specific address, thereby increasing the overall token supply.
 
 
-### Burn Function
+## Burn Function
 
 ```javascript 
     // burn function
@@ -68,6 +69,7 @@ This function effectively creates new tokens and assigns them to a specific addr
 Function Definition: function burn(address _address, uint _value) public defines a public function named burn.
 _address: The address from which the tokens will be deducted.
 _value: The number of tokens to be destroyed and removed from the total supply and the balance of the specified address.
+
 Function Body:
 if (balances[_address] >= _value) { ... } checks if the balance of the specified _address is greater than or equal to the _value amount.
 
