@@ -15,31 +15,14 @@ Now you can check token balance on the by clicking on the balances(mapping).For 
 
 Code Explaination
 
-
-
-
-====>Contract Declaration and License
+## Public Variables
 solidity
-PART OF CODE
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
-SPDX License Identifier: // SPDX-License-Identifier: MIT specifies that the code is licensed under the MIT License, which is a permissive free software license.
-Pragma Directive: pragma solidity 0.8.18; specifies that the code is written for Solidity version 0.8.18. This ensures that the contract will not compile with versions of the Solidity compiler outside this range.
-
-
-====>Contract Definition
-solidity
-PART OF CODE
-contract yourToken {
-The contract is named yourToken. A contract in Solidity is similar to a class in other programming languages. It encapsulates data and functions that can be executed on the Ethereum blockchain.
-
-====>Public Variables
-solidity
-PART OF CODE
+```javascript 
     // public variables here
     string public tokenName = "alpha";
     string public tokenAbbre = "alp";
     uint public totalSupply = 0;
+```
 tokenName: This is a public variable of type string that stores the name of the token, which is "alpha".
 tokenAbbre: This is a public variable of type string that stores the abbreviation of the token, which is "alp".
 totalSupply: This is a public variable of type uint (unsigned integer) that keeps track of the total supply of the token. It is initialized to 0.
