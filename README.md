@@ -6,16 +6,15 @@ Here we have created a contract in which first we will defining different variab
 ### Executing program
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., etherium_project.sol). 
-    
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile etherium_project.sol" button.
 
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "yourtoken" contract from the dropdown menu, and then click on the "Deploy" button.
 Now you can check token balance on the by clicking on the balances(mapping).For adding tokens to your account click on mint and write the number of tokens you want to add or mint.For removing tokens from your account click on burn and write the number of tokens you want to burn.And then you can verify your balance by clicking on balances.
 
 
-Code Explaination
+## Code Explaination
 
-## Public Variables
+### Public Variables
 solidity
 ```javascript 
     // public variables here
@@ -26,17 +25,17 @@ solidity
 tokenName: This is a public variable of type string that stores the name of the token, which is "alpha".
 tokenAbbre: This is a public variable of type string that stores the abbreviation of the token, which is "alp".
 totalSupply: This is a public variable of type uint (unsigned integer) that keeps track of the total supply of the token. It is initialized to 0.
-By declaring these variables as public, Solidity automatically creates getter functions for them. This allows other contracts or users to query these values.
+By declaring these variables as public, Solidity automatically creates getter functions for them.
 
-## Mapping for Balances
+### Mapping for Balances
 solidity
 ```javascript 
     // mapping variable here
     mapping(address => uint) public balances;
 ```
-balances: This is a mapping from addresses to unsigned integers. It is used to store the balance of each address. The key is an Ethereum address, and the value is the number of tokens that address holds. This mapping is also public, so a getter function is automatically created by Solidity.
+ Balances is a mapping from addresses to unsigned integers. It is used to store the balance of each address. The key is an Ethereum address, and the value is the number of tokens that address holds. This mapping is also public, so a getter function is automatically created by Solidity.
 
-## Mint Function
+### Mint Function
 solidity
 ```javascript 
     // mint function
@@ -45,19 +44,18 @@ solidity
         balances[_address] += _value;
     }
 ```
-Function Definition: function mint(address _address, uint _value) public defines a public function named mint.
+Function Definition:
 Parameters:
 _address: The address to which the new tokens will be credited.
 _value: The number of tokens to be created and added to the total supply and the balance of the specified address.
-
 Function Body:
 totalSupply += _value; increases the totalSupply by the _value amount.
 balances[_address] += _value; increases the balance of the specified _address by the _value amount.
 This function effectively creates new tokens and assigns them to a specific address, thereby increasing the overall token supply.
 
 
-## Burn Function
-solidity
+### Burn Function
+
 ```javascript 
     // burn function
     function burn(address _address, uint _value) public {
@@ -68,26 +66,14 @@ solidity
     }
 ```
 Function Definition: function burn(address _address, uint _value) public defines a public function named burn.
-Parameters:
 _address: The address from which the tokens will be deducted.
 _value: The number of tokens to be destroyed and removed from the total supply and the balance of the specified address.
 Function Body:
 if (balances[_address] >= _value) { ... } checks if the balance of the specified _address is greater than or equal to the _value amount.
-If the condition is true:
-totalSupply -= _value; decreases the totalSupply by the _value amount.
-balances[_address] -= _value; decreases the balance of the specified _address by the _value amount.
-This function effectively destroys the specified number of tokens from a given address, provided that the address has enough tokens. It reduces both the overall token supply and the balance of the address.
 
-====>
 
-SUMMARY:-
-The yourToken contract is a basic implementation of a cryptocurrency token with minting and burning functionality. It includes:
-
-Public variables to store the token name, abbreviation, and total supply.
-A mapping to keep track of each address's balance.
-A mint function to create new tokens and assign them to an address.
-A burn function to destroy tokens from an address, with a check to ensure the address has enough tokens to burn.
-This contract provides the fundamental operations needed to manage a simple token on the Ethereum blockchain.
+## SUMMARY:-
+The yourToken contract is a basic implementation of a cryptocurrency token with minting and burning functionality. 
 
 
 ## Authors
